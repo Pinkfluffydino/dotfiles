@@ -1,0 +1,223 @@
+/* Waybar CSS  */
+
+* {
+  border: none;
+  border-radius: 0px;
+  font-family:
+    Iosevka,
+    FontAwesome,
+    Noto Sans CJK;
+  font-size: 12px;
+  font-style: normal;
+  min-height: 0;
+}
+
+window#waybar {
+  background: rgba(255, 0, 117, 0.1);
+  border-bottom: 1px solid #282828;
+  color: #f4d9e1;
+}
+
+#workspaces {
+  background: #282828;
+  margin: 5px 5px 5px 5px;
+  padding: 0px 5px 0px 5px;
+  border-radius: 16px;
+  border: solid 0px #f4d9e1;
+  font-weight: normal;
+  font-style: normal;
+}
+#workspaces button {
+  padding: 0px 5px;
+  border-radius: 16px;
+  color: #928374;
+}
+
+#workspaces button.active {
+  color: #f4d9e1;
+  background-color: transparent;
+  border-radius: 16px;
+}
+
+#workspaces button:hover {
+  background-color: #e6b9c6;
+  color: black;
+  border-radius: 16px;
+}
+
+#clock,
+#battery,
+#pulseaudio,
+#custom-launcher {
+  background: rgba(40, 40, 40, 1);
+  padding: 5px 5px 5px 5px;
+  margin: 5px 5px 5px 5px;
+  border-radius: 8px;
+  border: solid 0px #f4d9e1;
+}
+
+#custom-switchkb,
+#custom-hyprpicker,
+#custom-screnshoots,
+#network {
+  background: rgba(40, 40, 40, 1);
+  padding: 5px 5px 5px 5px;
+  margin: 5px 0px 5px 0px;
+  border-radius: 0px;
+  border: solid 0px #f4d9e1;
+}
+
+#network {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin-right: 5px;
+  padding-right: 10px; /* Add margin to the right of the last module */
+  padding-top: 10px; /*Fix a missalign issue*/
+}
+
+#custom-switchkb {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  margin-left: 10px;
+  padding-left: 10px; /* Add margin to the left of the first module */
+}
+
+#custom-hyprpicker {
+  color: #dbf414;
+  padding-top: 6px; /* Fix a missalign issue*/
+}
+
+#custom-screnshoots {
+  color: #2fd6d9;
+}
+
+#tray {
+  background: #282828;
+  margin: 5px 5px 5px 5px;
+  border-radius: 16px;
+  padding: 0px 5px;
+}
+
+#clock {
+  color: #e6b9c6;
+  background-color: #282828;
+  border-radius: 0px 0px 0px 24px;
+  padding-left: 13px;
+  padding-right: 15px;
+  margin-right: 0px;
+  margin-left: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: bold;
+}
+
+#battery {
+  color: #9ece6a;
+}
+
+#battery.charging {
+  color: #9ece6a;
+}
+
+#battery.warning:not(.charging) {
+  background-color: #f7768e;
+  color: #24283b;
+  border-radius: 5px 5px 5px 5px;
+}
+
+#pulseaudio {
+  color: #f4d9e1;
+  border-radius: 8px;
+  margin-left: 0px;
+}
+
+#pulseaudio.muted {
+  background: transparent;
+  color: #928374;
+  border-radius: 8px;
+  margin-left: 0px;
+}
+
+#custom-launcher {
+  color: #e5809e;
+  background-color: #282828;
+  border-radius: 0px 24px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  padding: 0 20px 0 13px;
+  font-size: 20px;
+}
+
+#custom-playerctl {
+  background: #282828;
+  padding-left: 15px;
+  padding-right: 14px;
+  border-radius: 16px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 0px;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+}
+
+#custom-playerlabel {
+  background: transparent;
+  color: rgba(40, 210, 180, 0.5);
+  padding-left: 10px;
+  padding-right: 15px;
+  border-radius: 16px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: normal;
+  font-style: normal;
+}
+
+#window {
+  background: #282828;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 16px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: normal;
+  font-style: normal;
+}
+
+#cpu {
+  background-color: #282828;
+  color: #fabd2d;
+  border-radius: 16px;
+  margin: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 0px 10px 0px 10px;
+  font-weight: bold;
+}
+
+#memory {
+  background-color: #282828;
+  color: #83a598;
+  border-radius: 16px;
+  margin: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 0px 10px 0px 10px;
+  font-weight: bold;
+}
+
+#disk {
+  background-color: #282828;
+  color: #7e7ef5;
+  border-radius: 16px;
+  margin: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 0px 10px 0px 10px;
+  font-weight: bold;
+}
+
+#taskbar {
+  background: rgba(40, 40, 40, 1);
+  border-radius: 16px;
+  margin: 5px;
+}

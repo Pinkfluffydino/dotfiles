@@ -1,0 +1,172 @@
+// Config
+configuration {
+    display-drun: "";
+    drun-display-format: "{name}";
+    modi: "drun,run,window";
+    font: "GeistMonoNerd 12";
+    show-icons: true;
+    icon-theme: "Papirus";
+    levenshteain-sort: true;
+}
+
+// Theme
+* {
+    // Base colors
+    bg-color: #ffeaee;
+    text-color: #25252a;
+    border-color: #ffcad4;
+    
+    // Secondary colors
+    accent-color: #f178b6;
+    placeholder-color: #c7a9b5;
+    prompt-color: #e56b9f;
+    
+    // Panel colors
+    panel-bg: #fff0f3;
+    selected-bg: #ffd6e0;
+    selected-border: #ffacc5;
+    //scrollbar
+    scrollbar-bg: #50324b;
+    scrollbar-handle: #f9a8c7;
+    search-border: #50324b;
+    
+    // Dimensions
+    spacing: 0;
+    width: 800px;
+    height: 500px;
+    
+    // Element states
+    selected-normal-foreground: @accent-color;
+    selected-normal-background: #40234C;
+    normal-foreground: @text-color;
+    normal-background: transparent;
+    alternate-normal-foreground: @text-color;
+    alternate-normal-background: transparent;
+    
+    // Base settings
+    background-color: @bg-color;
+}
+
+window {
+    border: 1px;
+    border-color: @border-color;
+    border-radius: 6px;
+    padding: 0;
+    location: center;
+    anchor: center;
+    orientation: horizontal;
+    transparency: "real";
+}
+
+mainbox {
+    spacing: 0;
+    children: [imagebox, inputbar-and-listbox];
+    orientation: horizontal;
+}
+
+imagebox {
+    expand: false;
+    width: 400px;
+    height: 500px;
+    background-image: url("~/.config/rofi/rofi_bg2.jpeg", width);
+    border-radius: 6px 0px 0px 6px;
+}
+
+inputbar-and-listbox {
+    expand: true;
+    width: 400px;
+    spacing: 15px;
+    padding: 20px;
+    children: [inputbar, listview];
+    orientation: vertical;
+    background-color: @panel-bg;
+    border-radius: 0 6px 6px 0;
+}
+
+inputbar {
+    children: [prompt, entry];
+    background-color: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    border: 1px;
+    border-color: @search-border;
+}
+
+prompt {
+    enabled: true;
+    padding: 0 10px 0 0;
+    text-color: @prompt-color;
+}
+
+entry {
+    placeholder: "Search applications...";
+    placeholder-color: @text-color;
+    cursor: text;
+    text-color: @text-color;
+}
+
+/* Application list styling */
+listview {
+    border: 0;
+    padding: 0;
+    lines: 10;
+    columns: 1;
+    fixed-height: true;
+    scrollbar: true;
+    dynamic: true;
+    border-radius : 6px;
+}
+
+scrollbar {
+    width: 4px;
+    border: 0;
+    handle-width: 8px;
+    handle-color: @scrollbar-handle;
+    background-color: @scrollbar-bg;
+    margin: 0px 0px 0px 10px;
+}
+
+element {
+    padding: 8px;
+    spacing: 10px;
+    border-radius: 3px;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color: @text-color;
+}
+
+element selected.normal {
+    background-color: @selected-bg;
+    text-color: @accent-color;
+    border: 1px;
+    border-color: @selected-border;
+}
+
+element-icon {
+    size: 24px;
+    padding: 0 10px 0 0;
+}
+
+element-text {
+    vertical-align: 0.5;
+    text-color: inherit;
+}
+
+element normal active,
+element selected active,
+element alternate active,
+element normal urgent,
+element selected urgent,
+element alternate urgent {
+    text-color: @text-color;
+    background-color: transparent;
+}
+
+element selected.normal,
+element selected.active,
+element selected.urgent {
+    text-color: @accent-color;
+    background-color: rgba(230, 150, 190, 0.2);
+}

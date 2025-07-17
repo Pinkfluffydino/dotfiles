@@ -1,0 +1,7 @@
+{
+    "discordBranch": "canary",
+    "minimizeToTray": true,
+    "arRPC": true,
+    "splashColor": "oklch(0.75 0.025 330)",
+    "splashBackground": "oklch(0.16 0.015 330 / 0.9)"
+}
