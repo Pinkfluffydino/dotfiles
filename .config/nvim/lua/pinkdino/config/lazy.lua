@@ -23,6 +23,6 @@ require("lazy").setup({
 		{import = "pinkdino.plugins"},
 	},
 	checker = {
-		enabled = true,	--automatically update plugins
+		enabled = false,	--automatically update plugins
 	}
 })

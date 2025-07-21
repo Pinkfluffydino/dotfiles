@@ -24,7 +24,7 @@ return {
 		dependencies = {
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
-			"hrst7th/cmp-nvim-lsp",
+			"hrst7th/nvim-cmp",
 		},
 		config = function()
 			local lspconfig = require("lspconfig")

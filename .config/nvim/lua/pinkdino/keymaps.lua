@@ -24,8 +24,8 @@ map("n", "<C-d>", "<C-d>zz", {desc = "Center half page down"})
 map("n", "<C-u>", "<C-u>zz", {desc = "Center half page up"})
 
 --Buffer 
-map("n", "S-h", "<cmd>bnext<cr>", {desc = "Next buffer"})
-map("n", "S-l", "<cmd>bprevious<cr>", {desc = "Previous buffer"})
+map("n", "<TAB>", "<cmd>bn<cr>", {desc = "Next buffer"})
+map("n", "<S-TAB>", "<cmd>bp<cr>", {desc = "Previous buffer"})
 map("n", "<leader>c", "<cmd>bdelete<cr>", {desc = "Close current buffer"})
 
 --Text 
