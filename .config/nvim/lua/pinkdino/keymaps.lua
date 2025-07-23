@@ -48,3 +48,7 @@ map("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Live grep" })
 map("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find buffers" })
 map("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", { desc = "Find help tags" })
 
+--Lsp
+map("n", "gl", vim.diagnostic.open_float, {desc = "Open lsp diagnostics"})
+map("n", "<leader>gl", vim.diagnostic.setloclist, {desc = "Set lsp diagnostics to list form"})
+

@@ -1,223 +1,136 @@
 /* Waybar CSS  */
 
+
+/* Background bar color : rgba(255, 175, 195, 0.7) */
+/* Background dark color : rgba(35, 30, 30, 1) */
+/* Border color : #ffcad4 */
+/* Font color : #ddc5e0 */
+
+
+/*General*/
 * {
-  border: none;
-  border-radius: 0px;
-  font-family:
-    Iosevka,
-    FontAwesome,
-    Noto Sans CJK;
-  font-size: 12px;
-  font-style: normal;
-  min-height: 0;
+	border: none;
+	border-radius: 0px;
+	font-family: NotoSerifNerdFont;
+	font-size: 12px;
+	font-style: normal;
+	min-height: 0;
+	color: #f9e5f9;
 }
 
 window#waybar {
-  background: rgba(255, 0, 117, 0.1);
-  border-bottom: 1px solid #282828;
-  color: #f4d9e1;
+	background: rgba(255, 175, 195, 0.7);
+	border-bottom: 1px solid #151515;
 }
 
-#workspaces {
-  background: #282828;
-  margin: 5px 5px 5px 5px;
-  padding: 0px 5px 0px 5px;
-  border-radius: 16px;
-  border: solid 0px #f4d9e1;
-  font-weight: normal;
-  font-style: normal;
-}
-#workspaces button {
-  padding: 0px 5px;
-  border-radius: 16px;
-  color: #928374;
+/* tooltip */
+#tooltip {
+	background : rgba(20, 20, 20, 0.8);
+	border : 1px solid #ddc5e0;
 }
 
-#workspaces button.active {
-  color: #f4d9e1;
-  background-color: transparent;
-  border-radius: 16px;
+/*Left Modules*/
+
+/*leftmost module*/
+/*hyprland/workspaces*/
+#workspaces  {
+	margin : 4px 10px 4px 10px;
+	padding : 0;
+	border-radius : 0px;
+	background : rgba(35, 30, 30, 1);
+	border : 1px solid #ffcad4;
 }
 
-#workspaces button:hover {
-  background-color: #e6b9c6;
-  color: black;
-  border-radius: 16px;
+/* wlr/taskbar */
+#taskbar {
+	margin : 4px 2px 4px 0px;
+	padding : 0px 4px 0 4px;
+	background : rgba(35, 30, 30, 1);
+	font-size : 16px;
+	border : 1px solid #ffcad4;
 }
 
-#clock,
-#battery,
-#pulseaudio,
-#custom-launcher {
-  background: rgba(40, 40, 40, 1);
-  padding: 5px 5px 5px 5px;
-  margin: 5px 5px 5px 5px;
-  border-radius: 8px;
-  border: solid 0px #f4d9e1;
-}
-
-#custom-switchkb,
-#custom-hyprpicker,
-#custom-screnshoots,
-#network {
-  background: rgba(40, 40, 40, 1);
-  padding: 5px 5px 5px 5px;
-  margin: 5px 0px 5px 0px;
-  border-radius: 0px;
-  border: solid 0px #f4d9e1;
-}
-
-#network {
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-  margin-right: 5px;
-  padding-right: 10px; /* Add margin to the right of the last module */
-  padding-top: 10px; /*Fix a missalign issue*/
-}
-
-#custom-switchkb {
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-  margin-left: 10px;
-  padding-left: 10px; /* Add margin to the left of the first module */
-}
-
-#custom-hyprpicker {
-  color: #dbf414;
-  padding-top: 6px; /* Fix a missalign issue*/
-}
-
-#custom-screnshoots {
-  color: #2fd6d9;
-}
-
-#tray {
-  background: #282828;
-  margin: 5px 5px 5px 5px;
-  border-radius: 16px;
-  padding: 0px 5px;
-}
-
-#clock {
-  color: #e6b9c6;
-  background-color: #282828;
-  border-radius: 0px 0px 0px 24px;
-  padding-left: 13px;
-  padding-right: 15px;
-  margin-right: 0px;
-  margin-left: 10px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  font-weight: bold;
-}
-
-#battery {
-  color: #9ece6a;
-}
-
-#battery.charging {
-  color: #9ece6a;
-}
-
-#battery.warning:not(.charging) {
-  background-color: #f7768e;
-  color: #24283b;
-  border-radius: 5px 5px 5px 5px;
-}
-
-#pulseaudio {
-  color: #f4d9e1;
-  border-radius: 8px;
-  margin-left: 0px;
-}
-
-#pulseaudio.muted {
-  background: transparent;
-  color: #928374;
-  border-radius: 8px;
-  margin-left: 0px;
-}
-
-#custom-launcher {
-  color: #e5809e;
-  background-color: #282828;
-  border-radius: 0px 24px 0px 0px;
-  margin: 0px 0px 0px 0px;
-  padding: 0 20px 0 13px;
-  font-size: 20px;
-}
-
-#custom-playerctl {
-  background: #282828;
-  padding-left: 15px;
-  padding-right: 14px;
-  border-radius: 16px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 0px;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 16px;
-}
-
-#custom-playerlabel {
-  background: transparent;
-  color: rgba(40, 210, 180, 0.5);
-  padding-left: 10px;
-  padding-right: 15px;
-  border-radius: 16px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-weight: normal;
-  font-style: normal;
-}
-
+/*hyprland/window*/
 #window {
-  background: #282828;
-  padding-left: 15px;
-  padding-right: 15px;
-  border-radius: 16px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-weight: normal;
-  font-style: normal;
+	margin : 2px 0px 2px 0px;
+	padding : 0px 4px 0 4px;
+	color : #1e1e1e;
+	font-family : ZedMonoNerdFont-Italic;
+	font-style : italic;
 }
 
-#cpu {
-  background-color: #282828;
-  color: #fabd2d;
-  border-radius: 16px;
-  margin: 5px;
-  margin-left: 5px;
-  margin-right: 5px;
-  padding: 0px 10px 0px 10px;
-  font-weight: bold;
+/*Center Modules*/
+
+/* clock */
+#clock {
+	margin : 4px 0 4px 0;
+	padding : 0px 4px 0 4px;
+	border-radius : 0px;
+	background : rgba(35, 30, 30, 1);
+	border : 1px solid #ffcad4;
+}
+
+
+/*Right Modules*/
+
+/* tray */
+#tray {
+	margin : 4px 2px 4px 2px;
+	padding : 0 4px 0 4px; 
+	border-radius : 0px;
+	background : rgba(35, 30, 30, 1);
+	border : 1px solid #ffcad4;
+}
+
+/* tray */
+#network {
+	margin : 4px 2px 4px 2px;
+	padding : 0 4px 0 4px; 
+	border-radius : 0px;
+	background : rgba(35, 30, 30, 1);
+	border : 1px solid #ffcad4;
+}
+
+#system-stats {
+	margin : 4px 2px 4px 2px;
+	padding : 0px 4px 0px 4px;
+	border-radius : 0px;
+	background : rgba(35, 30, 30, 1);
+	border : 1px solid #ffcad4;
 }
 
 #memory {
-  background-color: #282828;
-  color: #83a598;
-  border-radius: 16px;
-  margin: 5px;
-  margin-left: 5px;
-  margin-right: 5px;
-  padding: 0px 10px 0px 10px;
-  font-weight: bold;
+	color : #ea949d;
+	margin : 0px 4px 0px 4px;
+} 
+
+#cpu {
+	color : #3282e2;
+	margin : 0px 4px 0px 4px;
 }
 
-#disk {
-  background-color: #282828;
-  color: #7e7ef5;
-  border-radius: 16px;
-  margin: 5px;
-  margin-left: 5px;
-  margin-right: 5px;
-  padding: 0px 10px 0px 10px;
-  font-weight: bold;
+
+#system-info {
+	margin : 4px 10px 4px 2px;
+	padding : 0 4px 0 4px;
+	border-radius : 0px;
+	background : rgba(35, 30, 30, 1);
+	border : 1px solid #ffcad4;
 }
 
-#taskbar {
-  background: rgba(40, 40, 40, 1);
-  border-radius: 16px;
-  margin: 5px;
+#wireplumber {
+	margin : 0px 4px 0px 4px;
+}
+
+#wireplumber.microphone {
+	margin : 0px 4px 0px 4px;
+}
+
+#language {
+	margin : 0px 4px 0px 4px;
+}
+
+#battery {
+	color : #3c963c;
+	margin : 0px 4px 0px 4px;
 }
