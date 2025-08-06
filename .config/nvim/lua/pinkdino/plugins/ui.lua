@@ -9,8 +9,8 @@ return {
 		priority = 1000,
 		config = function()	
 			require("rose-pine").setup({
-				variant = "main",
-				--vim.cmd.colorscheme("rose-pine")
+				variant = "moon",
+				vim.cmd.colorscheme("rose-pine")
 			})
 		end,
 	},
@@ -22,7 +22,7 @@ return {
 		priority = 1000,
 		config = function()
 			require("vague").setup({})
-			vim.cmd.colorscheme("vague")
+			--vim.cmd.colorscheme("vague")
 		end,
 	},
 

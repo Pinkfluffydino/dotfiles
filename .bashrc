@@ -11,3 +11,5 @@ alias grep='grep --color=auto'
 
 # To get starship working 
 eval "$(starship init bash)"
+export PATH=$PATH:/home/pinkdino/.local/bin/pkhex-cli
+export PATH=$PATH:/home/pinkdino/.local/bin/pkhex-cli

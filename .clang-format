@@ -16,3 +16,5 @@ AlignConsecutiveAssignments:
   AcrossEmptyLines: false
   AcrossComments: true
 ---
+CompileFlags:
+  Add: [-std=c23]

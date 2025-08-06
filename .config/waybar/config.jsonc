@@ -55,6 +55,21 @@
 
 	//network
 	"network": {
+		"interface": "enp2s0",
+		"format": "{ifname}",
+		"format-wifi": "({signalStrength}%) ",
+		"format-ethernet": "{ipaddr}/{cidr} 󰊗",
+		"format-disconnected": "", //An empty format will hide the module.
+		"tooltip-format": "{ifname} via {gwaddr} 󰊗",
+		"tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+		"tooltip-format-ethernet": "{ifname} ",
+		"tooltip-format-disconnected": "Disconnected",
+		"max-length": 50,
+		"on-click" : "kitty nmtui"
+	},
+
+	//network
+	"network#2": {
 		"interface": "wlo1",
 		"format": "{ifname}",
 		"format-wifi": "({signalStrength}%) ",
@@ -95,14 +110,14 @@
 		"on-click" : "kitty btop"
 	},
 
-	//brightness control
-	//volume
+	//kde-connect
 
 	//sys-info class
 	"group/system-info" : {
 		"orientation" : "horizontal",
 		"children-class" : "sys-info",
 		"modules" : [
+			"backlight",
 			"wireplumber", 
 			"wireplumber#microphone",
 			"hyprland/language",
@@ -110,9 +125,17 @@
 		]
 	},
 
+	//brightness control
+	"backlight" : {
+		"format": "{percent}% {icon}",
+		"format-icons": ["", "", "", "", "", "", "", "", ""],     
+		"on-scroll-up": "~/.config/waybar/scripts/brightness.sh +",
+		"on-scroll-down": "~/.config/waybar/scripts/brightness.sh -"
+	},
+
 	//volumecontrol
 	"wireplumber": {
-		"format": "{icon}  {volume}%",
+		"format": "{icon} {volume}%",
 		"format-muted": " ",
 		//"on-click": "~/.config/hypr/scripts/Volume.sh --toggle",
 		"on-click-right": "pavucontrol -t 3",
@@ -123,14 +146,9 @@
 	},	
 
 	"wireplumber#microphone": {
-		"format": " {volume}%",
-		"format-muted": " ",
+		"format": "",
 		//"on-click": "~/.config/hypr/scripts/Volume.sh --toggle-mic",
-		"on-click-right": "pavucontrol -t 4",
-		//"on-scroll-up": "~/.config/hypr/scripts/Volume.sh --mic-inc",
-		//"on-scroll-down": "~/.config/hypr/scripts/Volume.sh --mic-dec",
-		"tooltip-format": "{source_desc} | {source_volume}%",
-		"scroll-step": 5
+		"on-click-right": "pavucontrol -t 4"
 	},
 
 	//keyboard layout

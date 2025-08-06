@@ -25,17 +25,19 @@ map("n", "<C-u>", "<C-u>zz", {desc = "Center half page up"})
 
 --Buffer 
 map("n", "<TAB>", "<cmd>bn<cr>", {desc = "Next buffer"})
-map("n", "<S-TAB>", "<cmd>bp<cr>", {desc = "Previous buffer"})
 map("n", "<leader>c", "<cmd>bdelete<cr>", {desc = "Close current buffer"})
+map("n", "<S-TAB>", "<cmd>bp<cr>", {desc = "Previous buffer"})
 
 --Text 
 map("n", "<A-j>", ":m .+1<CR>==", {desc = "Change current line with line below"})
 map("n", "<A-k>", ":m .-2<CR>==", {desc = "Change current line with line below"})
+
 map("v", "<A-j>", ":m '>+1<CR>gv=gv", {desc = "Change current line with line below"})
 map("v", "<A-k>", ":m '>-2<CR>gv=gv", {desc = "Change current line with line above"})
 
-map("n", "<leader>nh", "<cmd>nohlsearch<cr>", {desc = "Clear highlight"})
 map("n", "Y", "y$", {desc = "Yank to the eol"})
+
+map("n", "<leader>nh", "<cmd>nohlsearch<cr>", {desc = "Clear highlight"})
 
 --PLUGINS
 --Nvim-tree
