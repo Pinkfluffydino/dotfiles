@@ -1,144 +1,166 @@
-/* Waybar CSS  */
+/*
+ * ~/.config/waybar/style.css
+ * Pastel Pink Theme
+ */
 
-/*General*/
-* {
-	border: none;
-	border-radius: 0px;
-	font-family: NotoSerifNerdFont;
-	font-size: 12px;
-	font-style: normal;
-	min-height: 0;
-	color: #f9e5f9;
-}
+/* -----------------------------------------------------
+ * CSS Variables
+ * ----------------------------------------------------- */
 
-/* bar */
+@define-color background      #2a2839; 
+@define-color foreground      #e0def4;
+@define-color inactive        #6e6a86;
+@define-color border          #49445c;
+@define-color hover           #49445c;
+
+@define-color pink            #ea9a97;
+@define-color mauve           #c4a7e7;
+@define-color red             #e98989;
+@define-color green           #a6e3a1;
+@define-color yellow          #f9e2af;
+@define-color blue            #89b4fa;
+@define-color teal            #94e2d5;
+
+
+/* -----------------------------------------------------
+ * General
+ * ----------------------------------------------------- */
+
 window#waybar {
-	/*modified by layerrule in hyprland configuration*/
-	background : rgba(255, 175, 195, 0.5);
-	/*background: rgba(30, 30, 20, 0.8);*/
-	border-bottom: 1px solid #151515;
+    background: transparent;
+    color: @foreground;
+    font-family: "GeistMonoNerdFont", "Font Awesome 6 Free";
+    font-size: 14px;
 }
 
-/* tooltip */
-#tooltip {
-	background : rgba(20, 20, 20, 0.8);
-	border : 1px solid #ddc5e0;
+/* -----------------------------------------------------
+ * Modules
+ * ----------------------------------------------------- */
+
+#workspaces,
+#taskbar,
+#window,
+#clock,
+#tray,
+#network,
+#memory,
+#cpu,
+#backlight,
+#wireplumber,
+#language,
+#battery {
+    background-color: @background;
+    padding: 1px 8px;
+    margin: 4px 3px;
+    border-radius: 0px;
+    border: 1px solid @border;
 }
 
-/*Left Modules*/
+/* -----------------------------------------------------
+ * Module Specifics - Left
+ * ----------------------------------------------------- */
 
-/*leftmost module*/
-/*hyprland/workspaces*/
-#workspaces  {
-	margin : 4px 10px 4px 10px;
-	padding : 0;
-	border-radius : 0px;
-	background : rgba(35, 30, 30, 1);
-	border : 1px solid #ffcad4;
+#workspaces button {
+    padding: 0 5px;
+    color: @inactive;
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
 }
 
-/* wlr/taskbar */
-#taskbar {
-	margin : 4px 2px 4px 0px;
-	padding : 0px 4px 0 4px;
-	background : rgba(35, 30, 30, 1);
-	font-size : 16px;
-	border : 1px solid #ffcad4;
+#workspaces button.active {
+    color: @green;
 }
 
-/*hyprland/window*/
+#workspaces button:hover {
+    background-color: @hover;
+    color: @foreground;
+}
+
 #window {
-	margin : 2px 0px 2px 0px;
-	padding : 0px 4px 0 4px;
-	color : #1e1e1e;
-	font-family : ZedMonoNerdFont-Italic;
-	font-style : italic;
+    font-weight: bold;
+    color: @mauve;
 }
 
-/*Center Modules*/
+/* -----------------------------------------------------
+ * Module Specifics - Center
+ * ----------------------------------------------------- */
 
-/* clock */
 #clock {
-	margin : 4px 0 4px 0;
-	padding : 0px 4px 0 4px;
-	border-radius : 0px;
-	background : rgba(35, 30, 30, 1);
-	border : 1px solid #ffcad4;
+    color: @pink;
+    font-weight: bold;
 }
 
+/* -----------------------------------------------------
+ * Module Specifics - Right
+ * ----------------------------------------------------- */
 
-/*Right Modules*/
-
-/* tray */
-#tray {
-	margin : 4px 2px 4px 2px;
-	padding : 0 4px 0 4px; 
-	border-radius : 0px;
-	background : rgba(35, 30, 30, 1);
-	border : 1px solid #ffcad4;
-}
-
-/* tray */
 #network {
-	margin : 4px 2px 4px 2px;
-	padding : 0 4px 0 4px; 
-	border-radius : 0px;
-	background : rgba(35, 30, 30, 1);
-	border : 1px solid #ffcad4;
-}
-
-#system-stats {
-	margin : 4px 2px 4px 2px;
-	padding : 0px 4px 0px 4px;
-	border-radius : 0px;
-	background : rgba(35, 30, 30, 1);
-	border : 1px solid #ffcad4;
+    color: @blue;
 }
 
 #memory {
-	color : #ea949d;
-	margin : 0px 4px 0px 4px;
-} 
-
-#cpu {
-	color : #3282e2;
-	margin : 0px 4px 0px 4px;
+    color: @red;
 }
 
-
-#system-info {
-	margin : 4px 10px 4px 2px;
-	padding : 0 4px 0 4px;
-	border-radius : 0px;
-	background : rgba(35, 30, 30, 1);
-	border : 1px solid #ffcad4;
+#cpu {
+    color: @green;
 }
 
 #backlight {
-	margin : 0px 4px 0px 4px;
+    color: @yellow;
 }
 
 #wireplumber {
-	margin : 0px 4px 0px 4px;
+    color: @teal;
 }
 
-#wireplumber.microphone {
-	margin : 0px 4px 0px 4px;
+#wireplumber.muted {
+    color: @red;
 }
 
 #language {
-	margin : 0px 4px 0px 4px;
+    color: @mauve;
 }
 
 #battery {
-	color : #13ad3e;
-	margin : 0px 4px 0px 4px;
+    color: @pink;
+}
+
+#battery.charging, #battery.plugged {
+    color: @green;
 }
 
 #battery.warning {
-	color : #fce237
-} 
+    color: @yellow;
+}
 
-#battery.critical { 
-	color : #bc1907
+#battery.critical {
+    color: @red;
+    animation-name: blink;
+    animation-duration: 0.8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: @red;
+        color: @background;
+    }
+}
+
+/* -----------------------------------------------------
+ * Tooltips
+ * ----------------------------------------------------- */
+
+tooltip {
+    background: @background;
+    border: 1px solid @mauve;
+    border-radius: 8px;
+}
+
+tooltip label {
+    color: @foreground;
 }

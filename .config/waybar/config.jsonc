@@ -1,7 +1,7 @@
 {
 	"layer" : "top",
 	"position" : "top",
-	"modules-left" : ["hyprland/workspaces", "wlr/taskbar", "hyprland/window"],
+	"modules-left" : ["hyprland/workspaces", "niri/workspaces", "wlr/taskbar", "hyprland/window", "niri/window"],
 	"modules-center" : ["clock"],
 	"modules-right" : ["tray", "network", "group/system-stats", "group/system-info"],
 
@@ -15,6 +15,11 @@
 		}
 	},
 
+	"niri/workspaces" : {
+		"format" : "{icon}",
+		"current-only" : false
+	},
+
 	"wlr/taskbar" : {
 		"format" : "{icon}",
 		"icon-size" : 14,
@@ -24,6 +29,10 @@
 		"ignore-list" : [
 			"com.mitchellh.ghostty"
 		]
+	},
+
+	"niri/window" : {
+		"format" : "{title}"
 	},
 
 	"hyprland/window" : {
@@ -159,8 +168,11 @@
 		"keyboard-name" : "evision-ak820",
 		"on-click" : "~/.config/hypr/scripts/toggle_kblang.sh"
 	},
+
+	"niri/language" : {
+		"format" : {}
+	},
 		
-	//TODO : configures tooltip by states
 	"battery" : {
 		"bat" : "BAT1",
 		"interval" : "120",
