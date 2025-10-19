@@ -1,0 +1,6 @@
+// === display.kdl: Output Configuration ===
+
+output "eDP-2" { 
+	mode "1920x1080@144.420" 
+	scale 1.0 
+}

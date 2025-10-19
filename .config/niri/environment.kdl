@@ -1,0 +1,10 @@
+// === environment.kdl: Environment Variables ===
+
+environment {
+	ELECTRON_OZONE_PLATFORM_HINT "auto"
+	XDG_SESSION_TYPE "wayland"
+	XDG_MENU_PREFIX "arch-"
+
+	QT_QPA_PATFORM "wayland"
+	QT_QPA_PLATFORMTHEME "kde"
+}

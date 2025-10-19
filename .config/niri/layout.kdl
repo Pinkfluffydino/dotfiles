@@ -1,0 +1,49 @@
+// === layout.kdl: Tiling, Borders, and Gaps Configuration ===
+
+layout {
+    gaps 5
+    center-focused-column "on-overflow"
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+    default-column-width { proportion 0.5; }
+	always-center-single-column
+
+    focus-ring {
+		off
+    }
+
+    border {
+        width 1
+		active-color "#ffcad4"
+		inactive-color "#211c0a"
+		urgent-color "#a02c28"
+    }
+
+    shadow {
+        on
+        softness 20
+        spread 2
+        offset x=0 y=3
+        color "#c1a47f"
+		inactive-color "#442a29"
+    }
+
+    struts {
+        
+ left 2
+        right 2
+        top -1
+        bottom -1
+    }
+
+	tab-indicator {
+		gap 10
+		place-within-column
+		active-color "#f9dbf4"
+	}
+
+	background-color "transparent"
+}

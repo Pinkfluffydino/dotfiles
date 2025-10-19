@@ -1,25 +1,23 @@
 /*
  * ~/.config/waybar/style.css
- * Pastel Pink Theme
  */
 
 /* -----------------------------------------------------
- * CSS Variables
  * ----------------------------------------------------- */
 
-@define-color background      #2a2839; 
-@define-color foreground      #e0def4;
-@define-color inactive        #6e6a86;
-@define-color border          #49445c;
-@define-color hover           #49445c;
+@define-color bar_background	#231f23;
+@define-color background		#211c0a; 
+@define-color foreground		#e5cce1; 
+@define-color inactive			#aaaaaa;
+@define-color border			#ffcad4;
+@define-color hover				#1a1a1a;
 
-@define-color pink            #ea9a97;
-@define-color mauve           #c4a7e7;
-@define-color red             #e98989;
-@define-color green           #a6e3a1;
-@define-color yellow          #f9e2af;
-@define-color blue            #89b4fa;
-@define-color teal            #94e2d5;
+@define-color red				#e98989;
+@define-color green				#a6e3a1;
+@define-color yellow			#f9e2af;
+
+@define-color cpu				#0fd1ff;	
+@define-color memory			#ffec0f;
 
 
 /* -----------------------------------------------------
@@ -27,9 +25,8 @@
  * ----------------------------------------------------- */
 
 window#waybar {
-    background: transparent;
-    color: @foreground;
-    font-family: "GeistMonoNerdFont", "Font Awesome 6 Free";
+	background-color : @bar_background;
+    font-family: "GeistMonoNerdFont"; 
     font-size: 14px;
 }
 
@@ -49,27 +46,35 @@ window#waybar {
 #wireplumber,
 #language,
 #battery {
-    background-color: @background;
+	background-color : @background;
+    color: @foreground; 
     padding: 1px 8px;
-    margin: 4px 3px;
-    border-radius: 0px;
-    border: 1px solid @border;
+    margin: 5px 5px;
+    border-radius: 0px; 
+    border: 1px solid @border; 
 }
 
 /* -----------------------------------------------------
- * Module Specifics - Left
+ * Left
  * ----------------------------------------------------- */
 
+#taskbar button {
+	padding : 0px;
+	margin : 0px;
+	border : none;
+}
+
 #workspaces button {
-    padding: 0 5px;
-    color: @inactive;
+    padding: 0 3px;
+    color: @inactive; 
     background-color: transparent;
     border: none;
     border-radius: 4px;
 }
 
 #workspaces button.active {
-    color: @green;
+    color: @foreground; 
+    background-color: @hover; 
 }
 
 #workspaces button:hover {
@@ -79,52 +84,52 @@ window#waybar {
 
 #window {
     font-weight: bold;
-    color: @mauve;
+    color: @foreground; 
 }
 
 /* -----------------------------------------------------
- * Module Specifics - Center
+ * Center
  * ----------------------------------------------------- */
 
 #clock {
-    color: @pink;
+    color: @foreground; /* White clock */
     font-weight: bold;
 }
 
 /* -----------------------------------------------------
- * Module Specifics - Right
+ *  Right 
  * ----------------------------------------------------- */
 
 #network {
-    color: @blue;
+    color: @foreground;
 }
 
 #memory {
-    color: @red;
+    color: @memory;
 }
 
 #cpu {
-    color: @green;
+    color: @cpu;
 }
 
 #backlight {
-    color: @yellow;
+    color: @foreground;
 }
 
 #wireplumber {
-    color: @teal;
+    color: @foreground;
 }
 
 #wireplumber.muted {
-    color: @red;
+    color: @red; /* Red when muted */
 }
 
 #language {
-    color: @mauve;
+    color: @foreground;
 }
 
 #battery {
-    color: @pink;
+    color: @foreground;
 }
 
 #battery.charging, #battery.plugged {
@@ -152,15 +157,14 @@ window#waybar {
 }
 
 /* -----------------------------------------------------
- * Tooltips
  * ----------------------------------------------------- */
 
 tooltip {
-    background: @background;
-    border: 1px solid @mauve;
+    background: @background; 
+    border: 1px solid @border; 
     border-radius: 8px;
 }
 
 tooltip label {
-    color: @foreground;
+    color: @foreground; 
 }

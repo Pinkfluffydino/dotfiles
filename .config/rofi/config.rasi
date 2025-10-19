@@ -68,7 +68,7 @@ imagebox {
     expand: false;
     width: 400px;
     height: 500px;
-    background-image: url("~/.config/rofi/rofi_bg4.jpg", width);
+    background-image: url("~/.config/rofi/rofi_bg2.jpeg", width);
     border-radius: 0px 0px 0px 0px;
 }
 
