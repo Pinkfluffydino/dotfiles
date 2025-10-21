@@ -1,7 +1,6 @@
 {
 	"layer" : "top",
 	"position" : "top",
-	"height" : 34,
 	"modules-left" : ["niri/workspaces", "wlr/taskbar", "niri/window"],
 	"modules-center" : ["clock"],
 	"modules-right" : ["tray", "network", "group/system-stats", "group/system-info"],
@@ -23,7 +22,7 @@
 
 	"wlr/taskbar" : {
 		"format" : "{icon}",
-		"icon-size" : 10,
+		"icon-size" : 14,
 		"tooltip" : true,
 		"tooltip-format" : "{title}",
 		"on-click" : "activate",

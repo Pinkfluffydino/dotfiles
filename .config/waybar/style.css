@@ -48,8 +48,8 @@ window#waybar {
 #battery {
 	background-color : @background;
     color: @foreground; 
-    padding: 1px 8px;
-    margin: 5px 5px;
+    padding: 0px 5px 0px 5px;
+    margin: 1px 3px 2px 3px;
     border-radius: 0px; 
     border: 1px solid @border; 
 }
@@ -59,22 +59,25 @@ window#waybar {
  * ----------------------------------------------------- */
 
 #taskbar button {
-	padding : 0px;
+	padding : 5px;
 	margin : 0px;
-	border : none;
+}
+
+#taskbar {
+	padding : 0px 8px;
+}
+
+/* lefmost module */
+#workspaces {
+	margin : 1px 3px 2px 8px
 }
 
 #workspaces button {
-    padding: 0 3px;
-    color: @inactive; 
-    background-color: transparent;
-    border: none;
-    border-radius: 4px;
+	padding : 0 7px;
 }
 
 #workspaces button.active {
-    color: @foreground; 
-    background-color: @hover; 
+    background-color: #e0cf64; 
 }
 
 #workspaces button:hover {
@@ -83,6 +86,8 @@ window#waybar {
 }
 
 #window {
+	background-color : transparent;
+	border : none;
     font-weight: bold;
     color: @foreground; 
 }
@@ -128,8 +133,10 @@ window#waybar {
     color: @foreground;
 }
 
+/*rightmost module */
 #battery {
     color: @foreground;
+	margin : 1px 8px 2px 3px;
 }
 
 #battery.charging, #battery.plugged {
