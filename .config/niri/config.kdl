@@ -172,6 +172,17 @@ window-rule {
 	open-maximized true
 }
 
+layer-rule {
+	match namespace="^launcher$"
+	opacity 0.88
+	shadow {
+		on
+		softness 20
+		spread 2
+		color "#ffcad4"
+	}
+}
+
 binds {
 	
     Mod+Shift+Slash { show-hotkey-overlay; }
