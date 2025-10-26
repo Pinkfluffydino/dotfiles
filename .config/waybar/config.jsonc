@@ -75,7 +75,7 @@
 		"tooltip-format-ethernet": "{ifname} ",
 		"tooltip-format-disconnected": "Disconnected",
 		"max-length": 50,
-		"on-click" : "kitty nmtui"
+		"on-click" : "nmtui"
 	},
 
 	//network
@@ -90,7 +90,7 @@
 		"tooltip-format-ethernet": "{ipaddr} ",
 		"tooltip-format-disconnected": "Disconnected",
 		"max-length": 50,
-		"on-click" : "nmtui"
+		"on-click" : "ghostty +new-window -e nmtui"
 	},
 
 	//sys-stats class

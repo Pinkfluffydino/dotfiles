@@ -1,11 +1,16 @@
 // Config
 configuration {
     display-drun: "";
+	font: "GeistMonoNerd 12";
     drun-display-format: "{name}";
     modi: "drun,run,window";
-    font: "GeistMonoNerd 12";
+
+	click-to-exit : true;
     show-icons: true;
     icon-theme: "Papirus";
+
+	me-select-entry: "MousePrimary";
+	me-accept-entry: "MouseDPrimary";
     levenshteain-sort: true;
 }
 

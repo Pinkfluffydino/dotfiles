@@ -137,6 +137,14 @@ animations {
 	}
 }
 
+//general
+window-rule {
+    geometry-corner-radius 0
+    clip-to-geometry true
+	open-focused true
+}
+
+//screencasting
 window-rule {
 	match is-window-cast-target=true
 
@@ -145,21 +153,22 @@ window-rule {
 	}
 }
 
+//keepassxc
 window-rule {
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
     block-out-from "screen-capture"
 }
 
-window-rule {
-    geometry-corner-radius 0
-    clip-to-geometry true
-	open-floating false
-	open-focused true
-}
-
+//browsers
 window-rule {
 	match app-id=r#"firefox"#
 	match app-id=r#"app.zen_browser.zen"#
+	open-maximized true
+}
+
+//osu
+window-rule {
+	match app-id=r#"osu!"#
 	open-maximized true
 }
 
@@ -167,8 +176,9 @@ binds {
 	
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+Q hotkey-overlay-title="Open a Terminal: alacritty" { spawn "ghostty"; }
-    Mod+Space hotkey-overlay-title="Run an Application: rofi" { spawn "rofi" "-show" "drun"; }
+    Mod+Q hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
+    //Mod+Space hotkey-overlay-title="Run an Application: rofi" { spawn "rofi" "-show" "drun"; }
+	Mod+Space hotkey-overlay-title="Run an Application : fuzzel" {spawn "fuzzel";}
 	Mod+E hotkey-overlay-title="Open the file manager" {spawn "dolphin"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
@@ -211,10 +221,6 @@ binds {
     Mod+I              { focus-workspace-down; }
     Mod+Ctrl+U         { move-column-to-workspace-down; }
     Mod+Ctrl+I         { move-column-to-workspace-up; }
-
-    // Alternatively, there are commands to move just a single window:
-    // Mod+Ctrl+Page_Down { move-window-to-workspace-down; }
-    // ...
 
     Mod+Shift+U         { move-workspace-down; }
     Mod+Shift+I         { move-workspace-up; }
