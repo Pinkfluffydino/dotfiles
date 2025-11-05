@@ -13,14 +13,16 @@ window-padding-y = 20,0
 #FONT
 font-family = ""
 font-family = "ZedMono Nerd Font Mono"
-font-size = 13
+font-size = 14
 
 #MOUSE
 mouse-hide-while-typing = true
 
+#NOTIFICATIONS
+app-notifications = false
+
 #BACKGROUND-TRANSPARENCY
-background-opacity = 0.97
-background-blur = false
+background-opacity = 0.95
 
 #KEYBINDS
 #UNBIND   
@@ -56,3 +58,4 @@ keybind = ctrl+shift+alt+l=resize_split:right,15
 #SCROLLING
 keybind = ctrl+up=scroll_page_up
 keybind = ctrl+down=scroll_page_down
+config-file = ./config-dankcolors

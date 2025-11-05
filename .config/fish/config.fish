@@ -15,6 +15,7 @@ set -x LC_CTYPE en_US.UTF-8
 #aliases
 #ls
 alias ls="ls -lh"
+alias hx="helix"
 
 #starship
 starship init fish | source 
