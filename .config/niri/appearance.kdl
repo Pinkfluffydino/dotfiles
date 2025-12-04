@@ -1,34 +1,92 @@
-// === appearance.kdl: Layer Rules, Overview, and Animations ===
-
-layer-rule {
-	match namespace="^wallpaper$"
-	place-within-backdrop true
-	opacity  0.35
+overview {
+	zoom 0.60
+	workspace-shadow {
+		softness 100
+		spread 20
+		offset x=10 y=10
+		color "#101010aa"
+	}
 }
 
-overview {
-	zoom 0.45
-	workspace-shadow {
+layout {
+    gaps 5
+    center-focused-column "never"
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+    default-column-width { proportion 0.5; }
+	always-center-single-column  
+
+    focus-ring {
 		off
+    }
+
+    border {
+        width 1
+		active-color "#ffcad4"
+		inactive-color "#211c0a"
+		urgent-color "#a02c28"
+    }
+
+    shadow {
+        on
+        softness 20
+        spread 2
+        offset x=0 y=3
+        color "#c1a47f"
+		inactive-color "#442a29"
+    }
+
+    struts {
+        left 0
+        right 0
+        top -1
+        bottom -1
+    }
+
+	tab-indicator {
+		gap 10
+		place-within-column
+		active-color "#f9dbf4"
 	}
+
+	background-color "transparent"
 }
 
 animations {
 	workspace-switch {
-		curve "cubic-bezier" 0.05 0.5 0.1 1
+		duration-ms 200
+		curve "cubic-bezier" 1 0 0 1
 	}
 
 	horizontal-view-movement {
-		 spring damping-ratio=0.87 stiffness=1200 epsilon=0.0001
+		duration-ms 100
+		curve "cubic-bezier" 0.9 0.15 0.15 0.9
+	}
+
+	window-movement {
+		duration-ms 100
+		curve "cubic-bezier" 0.9 0.15 0.15 0.9
 	}
 
 	window-open {
-		duration-ms 100
+		duration-ms 300
 		curve "ease-out-cubic"
 	}
 
 	window-close {
-		duration-ms 150
-		curve "ease-out-cubic"
+		duration-ms 300
+		curve "ease-out-expo"
+	}
+
+	overview-open-close {
+		spring damping-ratio=0.85 stiffness=1000 epsilon=0.0001
+	}
+
+	screenshot-ui-open {
+		duration-ms 300
+		curve "cubic-bezier" 1.0 0.5 0.5 0.3
 	}
 }

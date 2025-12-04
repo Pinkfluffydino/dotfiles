@@ -26,8 +26,8 @@
 
 window#waybar {
 	background-color : @background;
-    font-family: "GeistMonoNerdFont"; 
-    font-size: 14px;
+    font-family: "NotoMonoNerdFont"; 
+    font-size: 12px;
 }
 
 /* -----------------------------------------------------

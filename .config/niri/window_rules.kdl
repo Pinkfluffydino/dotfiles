@@ -1,5 +1,11 @@
-// === window-rules.kdl: Window-Specific Behavior and Properties ===
+//general
+window-rule {
+    geometry-corner-radius 8
+    clip-to-geometry true
+	open-focused true
+}
 
+//screencasting
 window-rule {
 	match is-window-cast-target=true
 
@@ -8,13 +14,43 @@ window-rule {
 	}
 }
 
+//block screencasting
 window-rule {
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    match app-id=r#"^org\.kde\.dolphin$"#
+	match app-id=r#"org.gnome.Nautilus"#
     block-out-from "screen-capture"
 }
 
+//browsers
 window-rule {
-    geometry-corner-radius 0
-    clip-to-geometry true
-	open-floating false
+	match app-id=r#"firefox"#
+	match app-id=r#"^app\.zen_browser\.zen$"#
+	open-maximized true
+}
+
+//file managers
+window-rule {
+	match app-id=r#"org.kde.dolphin"#
+	match app-id=r#"org.gnome.Nautilus"#
+	open-focused true
+	open-floating true
+}
+
+//osu
+window-rule {
+	match app-id=r#"osu!"#
+	open-maximized true
+	open-fullscreen true
+}
+
+layer-rule {
+	match namespace="quickshell"
+	place-within-backdrop true
+}
+
+layer-rule {
+	match namespace="^wallpaper$"
+	place-within-backdrop true
+	opacity  0.8
 }

@@ -1,4 +1,3 @@
-// === layout.kdl: Tiling, Borders, and Gaps Configuration ===
 
 layout {
     gaps 5

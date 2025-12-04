@@ -1,0 +1,20 @@
+[[language]]
+name = "python"
+auto-format = true
+language-servers = ["ruff", "pyright"]
+
+[language.formatter]
+command = "ruff"
+args = ["format" , "-"]
+
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
+
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
+
+[[language]]
+name = "zig"
+indent = {tab-width = 4, unit = "    "}

@@ -8,9 +8,9 @@ function fish_greeting
     echo Time : (set_color yellow)(date +%T)(set_color normal)
 end
 
-#perl use english locale 
 set -x LC_ALL en_US.UTF-8
 set -x LC_CTYPE en_US.UTF-8
+set -gx PATH $HOME/.local/bin:$PATH
 
 #aliases
 #ls
@@ -18,4 +18,4 @@ alias ls="ls -lh"
 alias hx="helix"
 
 #starship
-starship init fish | source 
+starship init fish | source
