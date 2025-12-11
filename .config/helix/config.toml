@@ -2,11 +2,17 @@ theme = "kanagawa-dragon"
 
 [editor]
 line-number = "relative"
+
 mouse = false
 text-width = 100
+
 continue-comments = false
+
 bufferline = "multiple"
 clipboard-provider = "termcode"
+
+auto-completion = true
+completion-trigger-len = 2
 
 [editor.cursor-shape]
 insert = "bar"
@@ -15,3 +21,6 @@ select = "underline"
 [editor.soft-wrap]
 enable = true
 max-wrap = 25
+
+[editor.lsp]
+display-inlay-hints = true

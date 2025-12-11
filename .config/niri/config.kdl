@@ -2,8 +2,6 @@
 // Check the wiki for a full description of the configuration:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Introduction
 
-//Use includes on next realease 
-
 //spawn-at-startup "waybar"
 //spawn-at-startup "wpaperd"
 //spawn-sh-at-startup "swaybg -i ~/Pictures/wallpapers/wallhaven-9od8rw_1920x1080.png"
@@ -22,16 +20,20 @@ prefer-no-csd
 
 // Environment variables
 include "environment.kdl"
+
 // Monitor and inputs configurations
 include "display.kdl"
+
 // Keybingds
 include "keybinds.kdl"
+
 // Window and layer rules
 include "window_rules.kdl"
+
 // Overall appearance 
 include "appearance.kdl"
 //dms stuf
-include "dms/alttab.kdl"
+// include "dms/alttab.kdl"
 //include "dms/colors.kdl"
 
 debug {

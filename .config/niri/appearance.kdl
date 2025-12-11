@@ -1,6 +1,7 @@
 overview {
-	zoom 0.60
+	zoom 0.50
 	workspace-shadow {
+		off
 		softness 100
 		spread 20
 		offset x=10 y=10
@@ -9,7 +10,7 @@ overview {
 }
 
 layout {
-    gaps 5
+    gaps 2
     center-focused-column "never"
     preset-column-widths {
         proportion 0.33333
@@ -24,16 +25,21 @@ layout {
     }
 
     border {
-        width 1
-		active-color "#ffcad4"
-		inactive-color "#211c0a"
-		urgent-color "#a02c28"
+    	on
+        width 2
+		// active-color "#ffcad4"
+		// inactive-color "#211c0a"
+		// urgent-color "#a02c28"
+        active-gradient from="#ffcad4" to="#ffc8ff" angle=60 relative-to="workspace-view"
+        inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view" in="srgb-linear"
+        urgent-gradient from="#800" to="#a33" angle=45
+
     }
 
     shadow {
         on
-        softness 20
-        spread 2
+        softness 10
+        spread 1
         offset x=0 y=3
         color "#c1a47f"
 		inactive-color "#442a29"
@@ -42,12 +48,12 @@ layout {
     struts {
         left 0
         right 0
-        top -1
-        bottom -1
+        top 0
+        bottom 0
     }
 
 	tab-indicator {
-		gap 10
+		gap 5
 		place-within-column
 		active-color "#f9dbf4"
 	}
