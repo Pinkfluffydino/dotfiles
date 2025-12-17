@@ -2,20 +2,25 @@
 // Check the wiki for a full description of the configuration:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Introduction
 
-//spawn-at-startup "waybar"
-//spawn-at-startup "wpaperd"
-//spawn-sh-at-startup "swaybg -i ~/Pictures/wallpapers/wallhaven-9od8rw_1920x1080.png"
+// xwayland-satellite
+// waybar
+// wpaperd 
+// swaybg
+
+spawn-at-startup "waybar"
+spawn-at-startup "wpaperd"
+spawn-sh-at-startup "swaybg -i ~/Pictures/wallpapers/wallhaven-9od8rw_1920x1080.png"
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 //dms
-spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
-spawn-at-startup "dms" "run"
-spawn-sh-at-startup "kbuildsycoca6"
+// spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
+// spawn-at-startup "dms" "run"
 
 config-notification {
 	disable-failed
 }
 
+spawn-sh-at-startup "kbuildsycoca6"
 prefer-no-csd
 
 // Environment variables

@@ -64,4 +64,4 @@ keybind = ctrl+down=scroll_page_down
 #custom-shader-animation = true
 
 #DMS
-config-file = ./config-dankcolors
+#config-file = ./config-dankcolors
