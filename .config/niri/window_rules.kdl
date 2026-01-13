@@ -34,7 +34,8 @@ window-rule {
 	match app-id=r#"org.kde.dolphin"#
 	match app-id=r#"org.gnome.Nautilus"#
 	open-focused true
-	open-floating true
+	default-column-width {proportion 0.6;}
+	// open-floating true
 }
 
 //osu
@@ -53,4 +54,11 @@ layer-rule {
 	match namespace="^wallpaper$"
 	place-within-backdrop true
 	opacity  0.8
+}
+
+
+//dms
+window-rule {
+    match app-id=r#"org.quickshell$"#
+    open-floating true
 }

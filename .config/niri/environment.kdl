@@ -2,10 +2,10 @@ environment {
 	ELECTRON_OZONE_PLATFORM_HINT "auto"
 	XDG_CURRENT_DESKTOP "niri"
 	XDG_SESSION_TYPE "wayland"
-	XDG_MENU_PREFIX "arch-"
+	XDG_MENU_PREFIX "plasma- "
 
-	//qt6ct
-	//qt5c6
+	//qt6ct-kde
+	//qt5ct-kde
 	//nwg-look
 	QT_QPA_PATFORM "wayland"
 	QT_QPA_PLATFORMTHEME "qt6ct"

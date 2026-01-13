@@ -7,20 +7,24 @@
 // wpaperd 
 // swaybg
 
-spawn-at-startup "waybar"
-spawn-at-startup "wpaperd"
-spawn-sh-at-startup "swaybg -i ~/Pictures/wallpapers/wallhaven-9od8rw_1920x1080.png"
+//spawn-at-startup "waybar"
+//spawn-at-startup "wpaperd"
+//spawn-sh-at-startup "swaybg -i ~/Pictures/wallpapers/wallhaven-9od8rw_1920x1080.png"
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 //dms
-// spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
-// spawn-at-startup "dms" "run"
+spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
+spawn-at-startup "dms" "run"
+spawn-at-startup "kbuildsycoca6" "--noincremental"
+
+//kde
+spawn-sh-at-startup "./scripts/solve_kde_xdg.sh"
 
 config-notification {
 	disable-failed
 }
 
-spawn-sh-at-startup "kbuildsycoca6"
+spawn-at-startup "kbuildsycoca6"
 prefer-no-csd
 
 // Environment variables
@@ -37,9 +41,12 @@ include "window_rules.kdl"
 
 // Overall appearance 
 include "appearance.kdl"
+
 //dms stuf
-// include "dms/alttab.kdl"
-//include "dms/colors.kdl"
+include "dms/colors.kdl"
+include "dms/layout.kdl"
+include "dms/alttab.kdl"
+include "dms/binds.kdl"
 
 debug {
 	honor-xdg-activation-with-invalid-serial

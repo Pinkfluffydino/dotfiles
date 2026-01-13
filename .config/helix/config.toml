@@ -2,15 +2,11 @@ theme = "kanagawa-dragon"
 
 [editor]
 line-number = "relative"
-
 mouse = false
 text-width = 100
-
 continue-comments = false
-
 bufferline = "multiple"
 clipboard-provider = "termcode"
-
 auto-completion = true
 completion-trigger-len = 2
 

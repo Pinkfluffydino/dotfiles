@@ -1,6 +1,7 @@
 [[language]]
 name = "python"
 auto-format = true
+indent = {tab-width = 4, unit = "    "}
 language-servers = ["ruff", "pyright"]
 
 [language.formatter]
@@ -22,3 +23,4 @@ indent = {tab-width = 4, unit = "    "}
 [[language]]
 name = "c"
 language-servers = ["clangd"]
+indent = {tab-width = 4, unit = "    "}

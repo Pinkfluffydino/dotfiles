@@ -1,3 +1,5 @@
+//DISPLAY AND INPUT
+
 cursor {
 	xcursor-theme "Bibata-Modern-Ice"
 	xcursor-size 20
@@ -22,8 +24,8 @@ input {
 
     mouse {
         accel-profile "flat"
-		accel-speed 0.20
-		scroll-factor 1.0
+		accel-speed 0.28
+		scroll-factor 1.1
     }
 
     focus-follows-mouse max-scroll-amount="0%"

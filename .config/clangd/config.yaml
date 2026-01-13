@@ -12,7 +12,6 @@ Diagnostics:
   ClangTidy:
     Add:
       - bugprone-*
-      - readability-*
       - cert-*
       - misc-*
     Remove:
@@ -26,6 +25,7 @@ Index:
   Background: build
 
 InlayHints:
+  BlockEnd: true
   Enabled: true
   ParameterNames : true
   DeducedTypes: true
