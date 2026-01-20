@@ -22,5 +22,5 @@ indent = {tab-width = 4, unit = "    "}
 
 [[language]]
 name = "c"
-language-servers = ["clangd"]
+file-types = ["c", "h"]
 indent = {tab-width = 4, unit = "    "}

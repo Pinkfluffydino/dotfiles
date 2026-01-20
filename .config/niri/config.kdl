@@ -14,15 +14,11 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 //dms
 spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
-spawn-at-startup "dms" "run"
-spawn-at-startup "kbuildsycoca6" "--noincremental"
-
-//kde
-spawn-sh-at-startup "./scripts/solve_kde_xdg.sh"
 
 config-notification {
 	disable-failed
 }
+
 
 spawn-at-startup "kbuildsycoca6"
 prefer-no-csd

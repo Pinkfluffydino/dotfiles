@@ -26,7 +26,7 @@ Index:
 
 InlayHints:
   BlockEnd: true
-  Enabled: true
+  Enabled: false
   ParameterNames : true
   DeducedTypes: true
   Designators: true

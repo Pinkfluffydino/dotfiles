@@ -16,16 +16,19 @@ set -gx PATH $HOME/.local/bin:$PATH
 alias hx="helix"
 
 function ls
-    command ls -lhF --time-style=long-iso --color=auto
+    command ls -lhF --time-style=long-iso --color=auto $argv
 end
 
 function cd
     set -l new_directory $argv
     if test (count $argv) -eq 0
-        set -l new_directory $HOME
+        builtin cd $HOME
+        return 0
+    else
+        builtin cd $new_directory
+        ls
+        return 0
     end
-    builtin cd $new_directory
-    ls
 end
 
 function mkdir
